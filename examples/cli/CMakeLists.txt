@@ -16,7 +16,6 @@ endif()
 pico_sdk_init()
 
 add_subdirectory(${PARENT_DIR} rp_toolkit)
-include_directories(${PARENT_DIR})
 
 if(TARGET tinyusb_device)
   add_executable(rp_cli_example main.c)
