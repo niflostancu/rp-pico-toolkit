@@ -47,7 +47,7 @@ int main() {
     }
 }
 
-static pico_cli_action_ret_t main_cmd_test(int argc, const char *argv[],
+static rp_cli_action_ret_t main_cmd_test(int argc, const char *argv[],
         void *aux_data)
 {
     long int n = 0;
@@ -58,7 +58,7 @@ static pico_cli_action_ret_t main_cmd_test(int argc, const char *argv[],
     return 0;
 }
 
-static pico_cli_action_ret_t main_cmd_hello(int argc, const char *argv[],
+static rp_cli_action_ret_t main_cmd_hello(int argc, const char *argv[],
         void *aux_data)
 {
     const char *name = "<Anonymous>";

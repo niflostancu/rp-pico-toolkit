@@ -62,7 +62,7 @@ int rp_cli_def_process(struct rp_cli_default_desc *cli);
  *
  * Only use with a default CLI instance!
  */
-pico_cli_action_ret_t rp_cli_cmd_auto_help(
+rp_cli_action_ret_t rp_cli_cmd_auto_help(
     int argc, const char *argv[], void *aux_data);
 
 /**

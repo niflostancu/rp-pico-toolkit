@@ -78,7 +78,7 @@ int rp_cli_def_process(struct rp_cli_default_desc *cli)
         goto _reset_prompt;
     }
     if (cmd->callback) {
-        pico_cli_action_ret_t ret = cmd->callback(
+        rp_cli_action_ret_t ret = cmd->callback(
             cli->_tokens.argc, cli->_tokens.argv, cmd->aux_data);
     }
 _reset_prompt:
@@ -114,7 +114,7 @@ static int _print_msg(struct rp_cli_default_desc *cli, const char *code,
     }
     if (cmd) {
         const char *argv[] = {code, msg};
-        pico_cli_action_ret_t ret = cmd->callback(2, argv, cmd->aux_data);
+        rp_cli_action_ret_t ret = cmd->callback(2, argv, cmd->aux_data);
         if (ret < 0) return -1;
     } else {
         /* default message handler */
@@ -127,7 +127,7 @@ static int _print_msg(struct rp_cli_default_desc *cli, const char *code,
 }
 
 /** Prints the default help message (for a given command or all of them). */
-pico_cli_action_ret_t rp_cli_cmd_auto_help(
+rp_cli_action_ret_t rp_cli_cmd_auto_help(
     int argc, const char *argv[], void *aux_data)
 {
     struct rp_cli_default_desc *cli = (struct rp_cli_default_desc *)aux_data;

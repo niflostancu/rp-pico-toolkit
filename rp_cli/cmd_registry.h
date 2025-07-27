@@ -17,14 +17,14 @@ typedef enum {
     /** Command execution failed (anything negative code be returned) */
     RP_CLI_CMD_ERROR = -1,
 
-} pico_cli_action_ret_t;
+} rp_cli_action_ret_t;
 
 /** Generic type of cooperative CLI command callback */
-typedef pico_cli_action_ret_t (*rp_cli_cmd_calback_t)(
+typedef rp_cli_action_ret_t (*rp_cli_cmd_calback_t)(
     int argc, const char *argv[], void *aux_data);
 
 #define RP_CLI_STATIC_CMD(_NAME_)  \
-    static pico_cli_action_ret_t _NAME_(int argc, const char *argv[], \
+    static rp_cli_action_ret_t _NAME_(int argc, const char *argv[], \
         void *aux_data)
 
 /**
