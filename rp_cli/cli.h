@@ -1,11 +1,8 @@
 #ifndef _LIB_RP_CLI_H
 #define _LIB_RP_CLI_H
 
-#ifdef RP_LIB_CONFIG_HEADER
-#include RP_LIB_CONFIG_HEADER
-#endif
-
 #include "rp_util/preprocessor.h"
+#include "rp_extra_config.h"
 
 /** Import all CLI headers. */
 #include "./readline.h"

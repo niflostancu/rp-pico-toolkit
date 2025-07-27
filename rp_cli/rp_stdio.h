@@ -4,10 +4,7 @@
  * RP Pico stdio-based IO implementation for the CLI.
  */
 
-#ifdef RP_LIB_CONFIG_HEADER
-#include RP_LIB_CONFIG_HEADER
-#endif
-
+#include "rp_extra_config.h"
 #include "./io.h"
 
 #ifndef RP_CLI_STDIO_READ_TIMEOUT_US

@@ -7,11 +7,7 @@
 #include <stdint.h>
 
 #include "rp_util/preprocessor.h"
-
-
-#ifdef RP_LIB_CONFIG_HEADER
-#include RP_LIB_CONFIG_HEADER
-#endif
+#include "rp_extra_config.h"
 
 #ifndef RP_CLI_MAX_CMD_ARGS
 /** Maximum number of allowed command arguments. */
